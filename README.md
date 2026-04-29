@@ -30,37 +30,6 @@ schema.sql
 
 Deniz Kılınç
 
----
-
-## 🚀 GitHub’a Yükleme Adımları
-
-1. Şu linke git:
-https://github.com/Elektronik-Raf-Etiketi/Database
-
-2. Sağ üstten:
-Add file → Upload files
-
-3. Dosyaları yükle:
-- schema.sql
-- README.md
-
-4. Commit message yaz:
-Initial database setup
-
-5. Commit changes butonuna bas
-
----
-
-## ✅ Kontrol
-
-Repo şöyle görünmeli:
-
-Database/
-├── schema.sql
-└── README.md
-
----
-
 ## 🎯 Not
 
 Bu repo:

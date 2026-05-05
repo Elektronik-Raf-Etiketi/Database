@@ -1,38 +1,25 @@
-# Elektronik Raf Etiketi (ESL) - Database
+# Elektronik Raf Etiketi - Database
 
-Bu repository, ESL projesi için PostgreSQL veritabanı şemasını içerir.
+Bu repository, Elektronik Raf Etiketi projesinin PostgreSQL veritabanı şemasını içerir.
 
 ## İçerik
 
-- users (kullanıcılar)
-- products (ürünler)
-- devices (ESP32 cihazlar)
-- device_product_bindings (eşleştirme)
-- price_updates (audit / güncelleme geçmişi)
-- device_logs (log kayıtları)
+- users
+- products
+- devices
+- device_product_bindings
+- price_updates
+- device_logs
 
-## Özellikler
+## Kullanım
 
-- Audit sistemi (price_updates)
-- MQTT publish/ack uyumlu yapı
-- Device-based update tracking
-- Index ve performans optimizasyonları
-- Demo veriler (10 ürün, 3 cihaz)
-
-## Kurulum
+pgAdmin 4 üzerinden yeni bir PostgreSQL database oluşturulur:
 
 ```sql
--- pgAdmin veya psql ile çalıştır:
-schema.sql
-```
+CREATE DATABASE esl_project;
 
-## Geliştirici
+Notlar
 
-Deniz Kılınç
-
-## 🎯 Not
-
-Bu repo:
-- Backend’in bağlanacağı resmi DB yapısıdır
-- ESP32 veri formatına referans olur
-- Projenin teknik temelidir
+Bu veritabanı yapısı backend ile uyumlu olacak şekilde hazırlanmıştır.
+MQTT publish/ack akışı için price_updates tablosu kullanılır.
+Cihaz logları device_logs tablosunda tutulur.
